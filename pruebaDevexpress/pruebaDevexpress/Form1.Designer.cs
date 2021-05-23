@@ -44,6 +44,7 @@
             this.colFechaVencimiento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrecio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEstante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ctestante = new DevExpress.XtraEditors.TextEdit();
             this.ctprecio = new DevExpress.XtraEditors.TextEdit();
             this.ctfechavencimiento = new DevExpress.XtraEditors.DateEdit();
@@ -67,6 +68,8 @@
             this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ctnombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -98,14 +101,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // btregistrarproducto
             // 
             this.btregistrarproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btregistrarproducto.Location = new System.Drawing.Point(857, 66);
+            this.btregistrarproducto.Location = new System.Drawing.Point(681, 66);
             this.btregistrarproducto.Name = "btregistrarproducto";
-            this.btregistrarproducto.Size = new System.Drawing.Size(226, 78);
+            this.btregistrarproducto.Size = new System.Drawing.Size(178, 78);
             this.btregistrarproducto.TabIndex = 0;
             this.btregistrarproducto.Text = "Registrar Producto";
             this.btregistrarproducto.UseVisualStyleBackColor = true;
@@ -117,12 +121,13 @@
             this.ctnombre.Name = "ctnombre";
             this.ctnombre.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctnombre.Properties.Appearance.Options.UseFont = true;
-            this.ctnombre.Size = new System.Drawing.Size(634, 30);
+            this.ctnombre.Size = new System.Drawing.Size(482, 30);
             this.ctnombre.StyleController = this.layoutControl1;
             this.ctnombre.TabIndex = 1;
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.btlimpiar);
             this.layoutControl1.Controls.Add(this.bteliminar);
@@ -136,15 +141,15 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1293, 458);
+            this.layoutControl1.Size = new System.Drawing.Size(1028, 458);
             this.layoutControl1.TabIndex = 5;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(899, 414);
+            this.simpleButton1.Location = new System.Drawing.Point(714, 414);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(382, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(302, 22);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 8;
             this.simpleButton1.Text = "Guardar Cambios";
@@ -153,18 +158,18 @@
             // btlimpiar
             // 
             this.btlimpiar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btlimpiar.ImageOptions.Image")));
-            this.btlimpiar.Location = new System.Drawing.Point(742, 106);
+            this.btlimpiar.Location = new System.Drawing.Point(590, 106);
             this.btlimpiar.Name = "btlimpiar";
-            this.btlimpiar.Size = new System.Drawing.Size(111, 38);
+            this.btlimpiar.Size = new System.Drawing.Size(87, 38);
             this.btlimpiar.StyleController = this.layoutControl1;
             this.btlimpiar.TabIndex = 7;
             this.btlimpiar.Click += new System.EventHandler(this.btlimpiar_Click);
             // 
             // bteliminar
             // 
-            this.bteliminar.Location = new System.Drawing.Point(987, 279);
+            this.bteliminar.Location = new System.Drawing.Point(784, 279);
             this.bteliminar.Name = "bteliminar";
-            this.bteliminar.Size = new System.Drawing.Size(197, 22);
+            this.bteliminar.Size = new System.Drawing.Size(155, 22);
             this.bteliminar.StyleController = this.layoutControl1;
             this.bteliminar.TabIndex = 6;
             this.bteliminar.Text = "Eliminar";
@@ -176,7 +181,7 @@
             this.gridControlProductos.Location = new System.Drawing.Point(12, 173);
             this.gridControlProductos.MainView = this.gridViewProductos;
             this.gridControlProductos.Name = "gridControlProductos";
-            this.gridControlProductos.Size = new System.Drawing.Size(883, 263);
+            this.gridControlProductos.Size = new System.Drawing.Size(698, 263);
             this.gridControlProductos.TabIndex = 5;
             this.gridControlProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewProductos});
@@ -197,7 +202,8 @@
             this.colNombre,
             this.colFechaVencimiento,
             this.colPrecio,
-            this.colEstante});
+            this.colEstante,
+            this.gridColumn1});
             this.gridViewProductos.GridControl = this.gridControlProductos;
             this.gridViewProductos.Name = "gridViewProductos";
             this.gridViewProductos.OptionsBehavior.Editable = false;
@@ -242,13 +248,21 @@
             this.colEstante.Visible = true;
             this.colEstante.VisibleIndex = 3;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Categoria";
+            this.gridColumn1.FieldName = "Idcategoria.Nombre";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 4;
+            // 
             // ctestante
             // 
             this.ctestante.Location = new System.Drawing.Point(104, 114);
             this.ctestante.Name = "ctestante";
             this.ctestante.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctestante.Properties.Appearance.Options.UseFont = true;
-            this.ctestante.Size = new System.Drawing.Size(634, 30);
+            this.ctestante.Size = new System.Drawing.Size(482, 30);
             this.ctestante.StyleController = this.layoutControl1;
             this.ctestante.TabIndex = 4;
             // 
@@ -260,7 +274,7 @@
             this.ctprecio.Properties.Appearance.Options.UseFont = true;
             this.ctprecio.Properties.Mask.EditMask = "n";
             this.ctprecio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.ctprecio.Size = new System.Drawing.Size(634, 30);
+            this.ctprecio.Size = new System.Drawing.Size(482, 30);
             this.ctprecio.StyleController = this.layoutControl1;
             this.ctprecio.TabIndex = 3;
             // 
@@ -275,7 +289,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ctfechavencimiento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ctfechavencimiento.Size = new System.Drawing.Size(634, 30);
+            this.ctfechavencimiento.Size = new System.Drawing.Size(482, 30);
             this.ctfechavencimiento.StyleController = this.layoutControl1;
             this.ctfechavencimiento.TabIndex = 2;
             // 
@@ -302,9 +316,10 @@
             this.emptySpaceItem9,
             this.emptySpaceItem10,
             this.layoutControlItem8,
-            this.layoutControlItem9});
+            this.layoutControlItem9,
+            this.layoutControlItem10});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1293, 458);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1028, 458);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -312,7 +327,7 @@
             this.layoutControlItem2.Control = this.ctnombre;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(730, 34);
+            this.layoutControlItem2.Size = new System.Drawing.Size(578, 34);
             this.layoutControlItem2.Text = "Nombre";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -321,7 +336,7 @@
             this.layoutControlItem3.Control = this.ctfechavencimiento;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 34);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(730, 34);
+            this.layoutControlItem3.Size = new System.Drawing.Size(578, 34);
             this.layoutControlItem3.Text = "Fecha Vencimiento";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -330,7 +345,7 @@
             this.layoutControlItem4.Control = this.ctprecio;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 68);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(730, 34);
+            this.layoutControlItem4.Size = new System.Drawing.Size(578, 34);
             this.layoutControlItem4.Text = "Precio";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -339,7 +354,7 @@
             this.layoutControlItem5.Control = this.ctestante;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 102);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(730, 34);
+            this.layoutControlItem5.Size = new System.Drawing.Size(578, 34);
             this.layoutControlItem5.Text = "Estante";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -348,48 +363,48 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 136);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(730, 25);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(578, 25);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(730, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(578, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(115, 94);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(91, 94);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btregistrarproducto;
-            this.layoutControlItem1.Location = new System.Drawing.Point(845, 54);
+            this.layoutControlItem1.Location = new System.Drawing.Point(669, 54);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(230, 82);
+            this.layoutControlItem1.Size = new System.Drawing.Size(182, 82);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(845, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(669, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(428, 54);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(339, 54);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(730, 136);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(578, 136);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(543, 25);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(430, 25);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(1075, 54);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(851, 54);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(198, 82);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(157, 82);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
@@ -397,16 +412,16 @@
             this.layoutControlItem6.Control = this.gridControlProductos;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 161);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(887, 267);
+            this.layoutControlItem6.Size = new System.Drawing.Size(702, 267);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(887, 161);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(702, 161);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(386, 106);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(306, 106);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
@@ -414,65 +429,84 @@
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.Location = new System.Drawing.Point(0, 428);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(1273, 10);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(1008, 10);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(887, 293);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(702, 293);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(386, 109);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(306, 83);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.bteliminar;
-            this.layoutControlItem7.Location = new System.Drawing.Point(975, 267);
+            this.layoutControlItem7.Location = new System.Drawing.Point(772, 267);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(201, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(159, 26);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(887, 267);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(702, 267);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(88, 26);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(70, 26);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem10
             // 
             this.emptySpaceItem10.AllowHotTrack = false;
-            this.emptySpaceItem10.Location = new System.Drawing.Point(1176, 267);
+            this.emptySpaceItem10.Location = new System.Drawing.Point(931, 267);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(97, 26);
+            this.emptySpaceItem10.Size = new System.Drawing.Size(77, 26);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btlimpiar;
-            this.layoutControlItem8.Location = new System.Drawing.Point(730, 94);
+            this.layoutControlItem8.Location = new System.Drawing.Point(578, 94);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(115, 42);
+            this.layoutControlItem8.Size = new System.Drawing.Size(91, 42);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.simpleButton1;
-            this.layoutControlItem9.Location = new System.Drawing.Point(887, 402);
+            this.layoutControlItem9.Location = new System.Drawing.Point(702, 402);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(386, 26);
+            this.layoutControlItem9.Size = new System.Drawing.Size(306, 26);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(714, 388);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(302, 22);
+            this.simpleButton2.StyleController = this.layoutControl1;
+            this.simpleButton2.TabIndex = 9;
+            this.simpleButton2.Text = "Exportar";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.simpleButton2;
+            this.layoutControlItem10.Location = new System.Drawing.Point(702, 376);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(306, 26);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 458);
+            this.ClientSize = new System.Drawing.Size(1028, 458);
             this.Controls.Add(this.layoutControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -508,6 +542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,6 +585,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }
 
